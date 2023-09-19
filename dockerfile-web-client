@@ -1,0 +1,9 @@
+FROM python:3.6-alpine3.15
+
+RUN apk add iperf
+
+# make work directory
+WORKDIR /app/src
+
+# hack to make container always alive
+CMD tail -F anything
